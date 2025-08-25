@@ -26,6 +26,8 @@
 
 #### 3.调好以后点击播放按键▶，然后快速点击模拟器窗口，让键盘的输入能进到模拟器窗口中
 #### 4.享受吧
+#### 附加
+MIDI放着没反应怎么办？点一下跳步按钮解决99%问题，跳步按钮在Tempo%左边
 ## English
 ## This is a modified version of [GreatCorn](https://github.com/GreatCorn)'s[MIRP](https://github.com/GreatCorn/MIRP/). Made for FFXIV Mobile
 Works under GNU GPL3.0
@@ -52,3 +54,5 @@ To get work on FF14 Mobile bard music system and play lower keys. Added function
 
 #### 3.Then click play▶ and click the simulator window quickly. Make computer focus on the simulator.
 #### 4.Enjoy
+#### Addition
+What if nothing happenes when MIDI file playing? Try press jump step button once! It's on the left side of the "Tempo%"
