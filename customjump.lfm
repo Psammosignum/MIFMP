@@ -1,0 +1,56 @@
+object FJump: TFJump
+  Left = 461
+  Height = 100
+  Top = 441
+  Width = 525
+  BorderStyle = bsDialog
+  Caption = 'Custom jump amount'
+  ClientHeight = 100
+  ClientWidth = 525
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  Position = poWorkAreaCenter
+  LCLVersion = '2.0.8.0'
+  object JumpInput: TLabeledEdit
+    Left = 5
+    Height = 28
+    Top = 30
+    Width = 515
+    EditLabel.Height = 20
+    EditLabel.Width = 515
+    EditLabel.Caption = 'Please input the amount of steps (parsed MIDI events) to use when jumping.'
+    EditLabel.ParentColor = False
+    EditLabel.ParentFont = False
+    EditLabel.ParentShowHint = False
+    EditLabel.ShowAccelChar = False
+    ParentBidiMode = False
+    ParentFont = False
+    ParentShowHint = False
+    TabOrder = 0
+    Text = 'JumpInput'
+    OnChange = JumpInputChange
+  end
+  object JumpCancel: TButton
+    Left = 426
+    Height = 31
+    Top = 64
+    Width = 94
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    ParentFont = False
+    TabOrder = 1
+  end
+  object JumpOk: TButton
+    Left = 330
+    Height = 31
+    Top = 64
+    Width = 94
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    OnClick = JumpOkClick
+    ParentFont = False
+    TabOrder = 2
+  end
+end
