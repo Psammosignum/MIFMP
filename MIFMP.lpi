@@ -20,7 +20,8 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <BuildNr Value="4"/>
+      <MinorVersionNr Value="1"/>
+      <BuildNr Value="2"/>
       <Attributes pvaPreRelease="True" pvaPatched="True"/>
       <StringTable CompanyName="Psamotisignum" FileDescription="Converts MIDI input to keystrokes." InternalName="MIFMP (MIDI Input to Roblox Piano)" LegalCopyright="© GreatCorn, 2020 Psamotisignum, 2025"/>
     </VersionInfo>

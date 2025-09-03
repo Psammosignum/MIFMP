@@ -563,4 +563,8 @@ object FMain: TFMain
     Options = [ofPathMustExist, ofCreatePrompt, ofEnableSizing, ofViewDetail]
     left = 720
   end
+  object Playcountdown: TTimer
+    OnTimer = PlaycountdownTimer
+    left = 775
+  end
 end

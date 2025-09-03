@@ -13,6 +13,7 @@ type
   { TFMain }
   TFMain = class(TForm)
     DynamicsCheck: TCheckBox;
+    Playcountdown: TTimer;
     TopCheck: TCheckBox;
     SaveLayoutDialog: TSaveDialog;
     SustainCheck: TCheckBox;
@@ -121,8 +122,9 @@ type
     procedure TuneMClick(Sender: TObject);
     procedure TunePClick(Sender: TObject);
     procedure TuneTrackChange(Sender: TObject);
+    procedure PlaycountdownTimer(Sender: TObject);
   private
-
+    PlayCD: Integer;
   public
 
   end;
@@ -199,8 +201,8 @@ var
   midiopen: boolean = false;
   midipaused: boolean = true;
   llKeyboardHook: HHOOK = 0;
-  pianoKeys: array[0..60] of PianoKey;
-  pianoLabels: array[0..60] of TLabel;
+  pianoKeys: array[0..36] of PianoKey;
+  pianoLabels: array[0..36] of TLabel;
   remapMode: boolean = false;
   waitForKey: integer = -1;
   shiftDown: boolean = false;
@@ -218,12 +220,10 @@ var
   LevelDynamics: boolean = false;
   Sustain: boolean = false;
 
-  Layout: array[0..60] of char = (
-  'f','g','h','i','j','k','l','m','n','o','p','q',
-  '1','a','2','b','3','4','c','5','d','6','e','7',
-  '8','A','@','B','#','$','C','%','D','^','E','&',
-  '*',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',
-  ' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ', ' ');
+  Layout: array[0..36] of char = (
+  '1','!','2','@','3','4','$','5','%','6','^','7',
+  '8','*','9','(','0','q','Q','w','W','e','E','r','t',
+  'T','y','Y','u','i','I','o','O','p','P','a','s');
 
   //TRANSLATIONS
   TRLastNote: string = 'Last played note number: ';
@@ -552,7 +552,7 @@ begin
     end;
   finally
     CloseFile(mlf);
-    FMain.Caption := 'MIRP (MIDI Input to Roblox Piano) - '+ExtractFileName(layoutFile);
+    FMain.Caption := 'MIFMP (MIDI Input to FFXIV Mobile Piano) - '+ExtractFileName(layoutFile);
     layoutChanged := false;
   end;
 end;
@@ -737,14 +737,15 @@ begin
   IsShifted := false;
   if ((pressValue >= 65) and (pressValue <= 90)) or (AnsiContainsStr(')!@#$%^&*(', charIn)) then IsShifted := true;
 end;
-function IsCtrled(const charIn: char):boolean;
-var
-  pressValue: byte;
-begin
-  pressValue:=Ord(charIn);
-  IsCtrled:=false;
-  if ((pressValue>=102) and (pressValue <=115)) then IsCtrled:= true;
-end;
+//function IsCtrled(const charIn: char):boolean;
+//var
+//  pressValue: byte;
+//begin
+//  pressValue:=Ord(charIn);
+//  IsCtrled:=false;
+//  if ((pressValue>=102) and (pressValue <=115)) then IsCtrled:= true;
+//end;
+
 
 function GetKeyValue(const charIn: char):byte;
 var
@@ -830,11 +831,11 @@ begin
   begin
     kv := GetKeyValue(Layout[charIn]);
     if (IsShifted(Layout[charIn])) then keybd_event(160, MapVirtualKey(160, 0), 0, 0);
-    if (IsCtrled(Layout[charIn])) then keybd_event(164, MapVirtualKey(164, 0), 0, 0);
+    //if (IsCtrled(Layout[charIn])) then keybd_event(164, MapVirtualKey(164, 0), 0, 0);
     keybd_event(kv, MapVirtualKey(kv, 0), 0, 0);
     keybd_event(kv, MapVirtualKey(kv, 0), 2, 0);
     if (IsShifted(Layout[charIn])) then keybd_event(160, MapVirtualKey(160, 0), 2, 0);
-    if (IsCtrled(Layout[charIn])) then keybd_event(164, MapVirtualKey(164, 0), 2, 0);
+    //if (IsCtrled(Layout[charIn])) then keybd_event(164, MapVirtualKey(164, 0), 2, 0);
   end;
   if (FMain.KeyboardCheck.Checked) and (remapMode = false) then
   begin
@@ -1163,9 +1164,11 @@ procedure TFMain.FormCreate(Sender: TObject);
 var
   i, keyNum: integer;
 begin
+  PlayCD:=3;
+  Playcountdown.Interval:=1000;
+  Playcountdown.Enabled:=false;
   Translate;
   SetPriorityClass(GetCurrentProcess, $8000);
-  //Translate;
   Inputs := TStringList.Create;
   Outputs := TStringList.Create;
   QueryInput;
@@ -1484,7 +1487,9 @@ begin
 end;
 procedure TFMain.MIDIPlayButtonClick(Sender: TObject);
 begin
-  PlayMIDI;
+  PlayCD:=3;
+  MIDIPlayButton.Caption:=PlayCD.ToString;
+  Playcountdown.Enabled:=true;
 end;
 procedure TFMain.MIDIPlayClick(Sender: TObject);
 begin
@@ -1497,10 +1502,14 @@ end;
 procedure TFMain.MIDIStopButtonClick(Sender: TObject);
 begin
   StopMIDI;
+  MIDIPlayButton.Caption:='▶';
+  Playcountdown.Enabled:=false;
 end;
 procedure TFMain.MIDIStopClick(Sender: TObject);
 begin
   StopMIDI;
+  MIDIPlayButton.Caption:='▶';
+  Playcountdown.Enabled:=false;
 end;
 procedure TFMain.MIDITempoChange(Sender: TObject);
 begin
@@ -1561,6 +1570,17 @@ end;
 procedure TFMain.TunePClick(Sender: TObject);
 begin
   TuneTrack.Position := TuneTrack.Position+1;
+end;
+procedure TFMain.PlaycountdownTimer(Sender: TObject);
+begin
+  Dec(PlayCD);
+  MIDIPlayButton.Caption:=PlayCD.ToString;
+  if PlayCD <= 0 then
+  begin
+    MIDIPlayButton.Caption:='▶';
+    PlayMIDI;
+    Playcountdown.Enabled:=false;
+  end;
 end;
 procedure TFMain.TuneTrackChange(Sender: TObject);
 begin

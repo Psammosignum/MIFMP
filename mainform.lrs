@@ -1,0 +1,163 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TFMain','FORMDATA',[
+  'TPF0'#6'TFMain'#5'FMain'#4'Left'#3'P'#9#6'Height'#3#19#1#3'Top'#3'2'#2#5'Wid'
+  +'th'#3'*'#3#7'Caption'#6'(MIFMP (MIDI Input to FFXIV Mobile Piano)'#12'Clien'
+  +'tHeight'#3#250#0#11'ClientWidth'#3'*'#3#5'Color'#4#240#240#240#0#21'Constra'
+  +'ints.MinHeight'#3#19#1#20'Constraints.MinWidth'#3' '#3#13'DesignTimePPI'#2
+  +'x'#4'Menu'#7#7'TopMenu'#8'OnCreate'#7#10'FormCreate'#9'OnDestroy'#7#11'Form'
+  +'Destroy'#8'OnResize'#7#10'ResizeKeys'#8'Position'#7#16'poDefaultPosOnly'#10
+  +'LCLVersion'#6#7'2.0.8.0'#0#9'TGroupBox'#10'InputFrame'#4'Left'#3#159#1#6'He'
+  +'ight'#2'D'#3'Top'#2'<'#5'Width'#3#134#1#7'Anchors'#11#7'akRight'#8'akBottom'
+  +#0#7'Caption'#6#19'Input configuration'#12'ClientHeight'#2'+'#11'ClientWidth'
+  +#3#130#1#10'ParentFont'#8#8'TabOrder'#2#0#0#9'TComboBox'#10'InputPorts'#4'Le'
+  +'ft'#2'<'#6'Height'#2#28#4'Hint'#6'3Here all available input devices will be'
+  +' displayed.'#3'Top'#2#8#5'Width'#3#235#0#21'ArrowKeysTraverseList'#8#16'Aut'
+  +'oCompleteText'#11#0#10'AutoSelect'#8#10'ItemHeight'#2#20#8'OnChange'#7#16'I'
+  +'nputPortsChange'#10'ParentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#5'Styl'
+  +'e'#7#14'csDropDownList'#8'TabOrder'#2#0#0#0#6'TLabel'#10'InputLabel'#4'Left'
+  +#2#5#6'Height'#2#19#3'Top'#2#16#5'Width'#2'0'#7'Anchors'#11#6'akLeft'#0#8'Au'
+  +'toSize'#8#7'Caption'#6#7'Device:'#11'Font.Height'#2#20#11'ParentColor'#8#10
+  +'ParentFont'#8#0#0#7'TButton'#11'InputButton'#4'Left'#3','#1#6'Height'#2#31#3
+  +'Top'#2#6#5'Width'#2'R'#7'Caption'#6#7'Refresh'#7'OnClick'#7#16'InputButtonC'
+  +'lick'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#0#9'TGroupBox'#12'OptionsFrame'#4
+  +'Left'#2#5#6'Height'#3#175#0#3'Top'#2'F'#5'Width'#3'O'#1#7'Anchors'#11#6'akL'
+  +'eft'#8'akBottom'#0#7'Caption'#6#7'Options'#12'ClientHeight'#3#150#0#11'Clie'
+  +'ntWidth'#3'K'#1#10'ParentFont'#8#8'TabOrder'#2#1#0#9'TTrackBar'#14'Threshol'
+  +'dTrack'#4'Left'#3#130#0#6'Height'#2#29#4'Hint'#6'<Notes with lower than spe'
+  +'cified velocity will not be played.'#3'Top'#2#2#5'Width'#3#180#0#3'Max'#2
+  +#127#8'OnChange'#7#20'ThresholdTrackChange'#8'Position'#2#0#9'TickStyle'#7#6
+  +'tsNone'#10'ParentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#8'TabOrder'#2#0
+  +#0#0#6'TLabel'#13'ThresholdShow'#4'Left'#3'6'#1#6'Height'#2#20#3'Top'#2#5#5
+  +'Width'#2#9#7'Caption'#6#1'0'#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TLabe'
+  +'l'#14'ThresholdLabel'#4'Left'#2#5#6'Height'#2#20#3'Top'#2#6#5'Width'#3#137#0
+  +#7'Anchors'#11#6'akLeft'#0#7'Caption'#6#19'Velocity threshold:'#11'ParentCol'
+  +'or'#8#10'ParentFont'#8#0#0#6'TLabel'#9'TuneLabel'#4'Left'#2#5#6'Height'#2#20
+  +#3'Top'#2'/'#5'Width'#2'('#7'Anchors'#11#6'akLeft'#0#7'Caption'#6#5'Tune:'#11
+  +'ParentColor'#8#10'ParentFont'#8#0#0#9'TTrackBar'#9'TuneTrack'#4'Left'#2'F'#6
+  +'Height'#2#29#4'Hint'#6#29'Tunes the input by semitones.'#3'Top'#2'$'#5'Widt'
+  +'h'#3#205#0#3'Max'#2'$'#3'Min'#2#220#8'OnChange'#7#15'TuneTrackChange'#8'Pos'
+  +'ition'#2#0#10'ParentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#8'TabOrder'#2
+  +#1#0#0#7'TButton'#5'TuneM'#4'Left'#2'2'#6'Height'#2#31#3'Top'#2'#'#5'Width'#2
+  +#20#7'Caption'#6#1'-'#7'OnClick'#7#10'TuneMClick'#10'ParentFont'#8#8'TabOrde'
+  +'r'#2#2#0#0#7'TButton'#5'TuneP'#4'Left'#3#16#1#6'Height'#2#31#3'Top'#2'#'#5
+  +'Width'#2#20#7'Caption'#6#1'+'#7'OnClick'#7#10'TunePClick'#10'ParentFont'#8#8
+  +'TabOrder'#2#3#0#0#6'TLabel'#8'TuneShow'#4'Left'#3'6'#1#6'Height'#2#20#3'Top'
+  +#2')'#5'Width'#2#9#7'Caption'#6#1'0'#11'ParentColor'#8#10'ParentFont'#8#0#0#9
+  +'TCheckBox'#14'TransposeCheck'#4'Left'#2#5#6'Height'#2#24#4'Hint'#6'oIf chec'
+  +'ked, a note played out of range of the Roblox piano will be transposed a pe'
+  +'rfect octave higher or lower.'#3'Top'#2'N'#5'Width'#3#253#0#7'Caption'#6#30
+  +'Transpose out of range octaves'#8'OnChange'#7#20'TransposeCheckChange'#10'P'
+  +'arentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#8'TabOrder'#2#4#0#0#9'TChec'
+  +'kBox'#13'KeyboardCheck'#4'Left'#2#5#6'Height'#2#24#4'Hint'#6'1If checked, t'
+  +'he piano keyboard will be displayed.'#3'Top'#2'f'#5'Width'#3#194#0#7'Captio'
+  +'n'#6#22'Display piano keyboard'#8'OnChange'#7#19'KeyboardCheckChange'#10'Pa'
+  +'rentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#8'TabOrder'#2#5#0#0#9'TCheck'
+  +'Box'#9'MuteCheck'#4'Left'#3#190#0#6'Height'#2#24#4'Hint'#6'8If checked, not'
+  +'hing will be played through the keyboard.'#3'Top'#2'f'#5'Width'#2'?'#7'Capt'
+  +'ion'#6#4'Mute'#8'OnChange'#7#15'MuteCheckChange'#10'ParentFont'#8#14'Parent'
+  +'ShowHint'#8#8'ShowHint'#9#8'TabOrder'#2#6#0#0#9'TCheckBox'#8'TopCheck'#4'Le'
+  +'ft'#2#5#6'Height'#2#24#4'Hint'#6'BIf checked, the program window will stay '
+  +'on top of other programs.'#3'Top'#2'~'#5'Width'#3'$'#1#7'Caption'#6'"Progra'
+  +'m window always stays on top'#8'OnChange'#7#14'TopCheckChange'#10'ParentFon'
+  +'t'#8#14'ParentShowHint'#8#8'ShowHint'#9#8'TabOrder'#2#7#0#0#0#9'TGroupBox'#9
+  +'MIDIFrame'#4'Left'#3'^'#1#6'Height'#2's'#3'Top'#3#130#0#5'Width'#3#196#1#7
+  +'Anchors'#11#7'akRight'#8'akBottom'#0#7'Caption'#6#16'MIDI file player'#12'C'
+  +'lientHeight'#2'Z'#11'ClientWidth'#3#192#1#10'ParentFont'#8#8'TabOrder'#2#2#0
+  +#12'TProgressBar'#12'MIDIProgress'#4'Left'#2#5#6'Height'#2#15#3'Top'#2#5#5'W'
+  ,'idth'#3#179#1#11'ParentColor'#8#10'ParentFont'#8#6'Smooth'#9#8'TabOrder'#2#0
+  +#0#0#7'TButton'#14'MIDIPlayButton'#4'Left'#2#5#6'Height'#2#28#4'Hint'#6#4'Pl'
+  +'ay'#3'Top'#2'8'#5'Width'#2#25#7'Caption'#6#3#226#150#182#7'OnClick'#7#19'MI'
+  +'DIPlayButtonClick'#10'ParentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#8'Ta'
+  +'bOrder'#2#1#0#0#7'TButton'#15'MIDIPauseButton'#4'Left'#2#30#6'Height'#2#28#4
+  +'Hint'#6'(Pause (press End key anytime to execute)'#3'Top'#2'8'#5'Width'#2#25
+  +#7'Caption'#6#6#226#157#154#226#157#154#7'OnClick'#7#20'MIDIPauseButtonClick'
+  +#10'ParentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#8'TabOrder'#2#2#0#0#7'T'
+  +'Button'#14'MIDIStopButton'#4'Left'#2'7'#6'Height'#2#28#4'Hint'#6#4'Stop'#3
+  +'Top'#2'8'#5'Width'#2#25#7'Caption'#6#3#226#150#160#7'OnClick'#7#19'MIDIStop'
+  +'ButtonClick'#10'ParentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#8'TabOrder'
+  +#2#3#0#0#9'TSpinEdit'#9'MIDITempo'#4'Left'#3#200#0#6'Height'#2#28#3'Top'#2'7'
+  +#5'Width'#2'>'#8'MaxValue'#2#0#8'OnChange'#7#15'MIDITempoChange'#10'ParentFo'
+  +'nt'#8#8'TabOrder'#2#4#5'Value'#2'd'#0#0#6'TLabel'#14'MIDITempoLabel'#4'Left'
+  +#3#135#0#6'Height'#2#20#3'Top'#2';'#5'Width'#2'A'#7'Caption'#6#6'Tempo%'#11
+  +'ParentColor'#8#10'ParentFont'#8#0#0#9'TComboBox'#11'OutputPorts'#4'Left'#3
+  +'@'#1#6'Height'#2#28#4'Hint'#6'4Here all available output devices will be di'
+  +'splayed.'#3'Top'#2'7'#5'Width'#2'x'#21'ArrowKeysTraverseList'#8#16'AutoComp'
+  +'leteText'#11#0#10'AutoSelect'#8#10'ItemHeight'#2#20#8'OnChange'#7#17'Output'
+  +'PortsChange'#10'ParentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#5'Style'#7
+  +#14'csDropDownList'#8'TabOrder'#2#5#0#0#6'TLabel'#11'OutputLabel'#4'Left'#3
+  +#12#1#6'Height'#2#20#3'Top'#2';'#5'Width'#2'4'#7'Caption'#6#6'Output'#11'Par'
+  +'entColor'#8#10'ParentFont'#8#0#0#9'TCheckBox'#10'DrumsCheck'#4'Left'#2#5#6
+  +'Height'#2#24#4'Hint'#6'3If checked, channel 10 will be played (percussion).'
+  +#3'Top'#2#28#5'Width'#3#228#0#7'Caption'#6#28'Play channel 10 (percussion)'#8
+  +'OnChange'#7#16'DrumsCheckChange'#10'ParentFont'#8#14'ParentShowHint'#8#8'Sh'
+  +'owHint'#9#8'TabOrder'#2#6#0#0#7'TButton'#14'MIDIPrevButton'#4'Left'#2'P'#6
+  +'Height'#2#28#4'Hint'#6#13'Previous step'#3'Top'#2'8'#5'Width'#2#25#7'Captio'
+  +'n'#6#3#226#135#166#7'OnClick'#7#19'MIDIPrevButtonClick'#10'ParentFont'#8#14
+  +'ParentShowHint'#8#8'ShowHint'#9#8'TabOrder'#2#7#0#0#7'TButton'#14'MIDINextB'
+  +'utton'#4'Left'#2'i'#6'Height'#2#28#4'Hint'#6#9'Next step'#3'Top'#2'8'#5'Wid'
+  +'th'#2#25#7'Caption'#6#3#226#135#168#7'OnClick'#7#19'MIDINextButtonClick'#10
+  +'ParentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#8'TabOrder'#2#8#0#0#9'TChe'
+  +'ckBox'#13'DynamicsCheck'#4'Left'#3#222#0#6'Height'#2#24#4'Hint'#6#127'If ch'
+  +'ecked, all note velocities will be set to 64 for output. This is to simulat'
+  +'e the sound you will get out of a Roblox piano.'#3'Top'#2#28#5'Width'#3#134
+  +#0#7'Caption'#6#14'Level dynamics'#8'OnChange'#7#19'DynamicsCheckChange'#10
+  +'ParentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#8'TabOrder'#2#9#0#0#9'TChe'
+  +'ckBox'#12'SustainCheck'#4'Left'#3'c'#1#6'Height'#2#24#4'Hint'#6#243'If chec'
+  +'ked, all notes will be played only as note-on without note-off, creating a '
+  +'sustain pedal effect (note that if a MIDI contains sustain pedal data it wi'
+  +'ll still be played). This is to simulate the sound you will get out of a Ro'
+  +'blox piano.'#3'Top'#2#28#5'Width'#2'L'#7'Caption'#6#7'Sustain'#8'OnChange'#7
+  +#18'SustainCheckChange'#10'ParentFont'#8#14'ParentShowHint'#8#8'ShowHint'#9#8
+  +'TabOrder'#2#10#0#0#0#5'TMemo'#9'TextLabel'#4'Left'#2#5#6'Height'#2'A'#3'Top'
+  +#2#5#5'Width'#3#152#1#11'BorderStyle'#7#6'bsNone'#5'Color'#4#240#240#240#0#13
+  +'Lines.Strings'#1#6'%Play any note on your piano keyboard.'#0#10'ParentFont'
+  +#8#8'ReadOnly'#9#8'TabOrder'#2#3#0#0#9'TMainMenu'#7'TopMenu'#4'left'#3#178#2
+  +#0#9'TMenuItem'#8'MenuFile'#7'Caption'#6#4'File'#0#9'TMenuItem'#12'FileMIDIO'
+  +'pen'#7'Caption'#6#12'Open MIDI...'#8'ShortCut'#3'O@'#7'OnClick'#7#17'FileMI'
+  +'DIOpenClick'#0#0#9'TMenuItem'#13'FileMIDIClose'#7'Caption'#6#10'Close MIDI'
+  +#7'OnClick'#7#18'FileMIDICloseClick'#0#0#9'TMenuItem'#2'N2'#7'Caption'#6#1'-'
+  +#0#0#9'TMenuItem'#10'FileCreate'#7'Caption'#6#13'Create layout'#8'ShortCut'#3
+  +'N@'#7'OnClick'#7#15'FileCreateClick'#0#0#9'TMenuItem'#10'FileLayout'#7'Capt'
+  +'ion'#6#14'Open layout...'#8'ShortCut'#3'L@'#7'OnClick'#7#15'FileLayoutClick'
+  +#0#0#9'TMenuItem'#8'FileSave'#7'Caption'#6#11'Save layout'#8'ShortCut'#3'S@'
+  +#7'OnClick'#7#13'FileSaveClick'#0#0#9'TMenuItem'#10'FileSaveAs'#7'Caption'#6
+  +#17'Save layout as...'#8'ShortCut'#3'S`'#7'OnClick'#7#15'FileSaveAsClick'#0#0
+  +#9'TMenuItem'#2'N1'#7'Caption'#6#1'-'#0#0#9'TMenuItem'#8'FileExit'#7'Caption'
+  +#6#4'Exit'#7'OnClick'#7#13'FileExitClick'#0#0#0#9'TMenuItem'#8'MenuEdit'#7'C'
+  +'aption'#6#4'Edit'#0#9'TMenuItem'#10'EditLayout'#9'AutoCheck'#9#7'Caption'#6
+  +#16'Layout edit mode'#8'ShortCut'#3'E@'#19'ShowAlwaysCheckable'#9#7'OnClick'
+  +#7#15'EditLayoutClick'#0#0#9'TMenuItem'#2'N5'#7'Caption'#6#1'-'#0#0#9'TMenuI'
+  +'tem'#11'EditShiftUp'#7'Caption'#6#15'Shift layout up'#8'ShortCut'#3#187'@'#7
+  ,'OnClick'#7#16'EditShiftUpClick'#0#0#9'TMenuItem'#13'EditShiftDown'#7'Captio'
+  +'n'#6#17'Shift layout down'#8'ShortCut'#3#189'@'#7'OnClick'#7#18'EditShiftDo'
+  +'wnClick'#0#0#0#9'TMenuItem'#8'MenuMIDI'#7'Caption'#6#4'MIDI'#0#9'TMenuItem'
+  +#8'MIDIPlay'#7'Caption'#6#9'Play MIDI'#7'OnClick'#7#13'MIDIPlayClick'#0#0#9
+  +'TMenuItem'#9'MIDIPause'#7'Caption'#6#26'Pause MIDI (press End key)'#7'OnCli'
+  +'ck'#7#14'MIDIPauseClick'#0#0#9'TMenuItem'#8'MIDIStop'#7'Caption'#6#9'Stop M'
+  +'IDI'#7'OnClick'#7#13'MIDIStopClick'#0#0#9'TMenuItem'#2'N3'#7'Caption'#6#1'-'
+  +#0#0#9'TMenuItem'#8'MIDIJump'#7'Caption'#6#13'Jump modifier'#0#9'TMenuItem'#9
+  +'MIDIJump1'#9'AutoCheck'#9#7'Caption'#6#6'1 step'#7'Checked'#9#9'RadioItem'#9
+  +#8'ShortCut'#3'1@'#19'ShowAlwaysCheckable'#9#7'OnClick'#7#14'MIDIJump1Click'
+  +#0#0#9'TMenuItem'#9'MIDIJump5'#9'AutoCheck'#9#7'Caption'#6#7'5 steps'#9'Radi'
+  +'oItem'#9#8'ShortCut'#3'2@'#19'ShowAlwaysCheckable'#9#7'OnClick'#7#14'MIDIJu'
+  +'mp5Click'#0#0#9'TMenuItem'#10'MIDIJump10'#9'AutoCheck'#9#7'Caption'#6#8'10 '
+  +'steps'#9'RadioItem'#9#8'ShortCut'#3'3@'#19'ShowAlwaysCheckable'#9#7'OnClick'
+  +#7#15'MIDIJump10Click'#0#0#9'TMenuItem'#10'MIDIJump50'#9'AutoCheck'#9#7'Capt'
+  +'ion'#6#8'50 steps'#9'RadioItem'#9#8'ShortCut'#3'4@'#19'ShowAlwaysCheckable'
+  +#9#7'OnClick'#7#15'MIDIJump50Click'#0#0#9'TMenuItem'#2'N4'#7'Caption'#6#1'-'
+  +#0#0#9'TMenuItem'#14'MIDIJumpCustom'#7'Caption'#6#15'Custom value...'#9'Radi'
+  +'oItem'#9#8'ShortCut'#3'5@'#7'OnClick'#7#19'MIDIJumpCustomClick'#0#0#0#0#9'T'
+  +'MenuItem'#8'MenuHelp'#7'Caption'#6#4'Help'#0#9'TMenuItem'#9'HelpAbout'#7'Ca'
+  +'ption'#6#5'About'#8'ShortCut'#2'p'#7'OnClick'#7#14'HelpAboutClick'#0#0#0#0
+  +#11'TOpenDialog'#10'OpenLayout'#10'DefaultExt'#6#4'.mlf'#6'Filter'#6'%MIRP l'
+  +'ayout files|*.mlf|All files|*.*'#7'Options'#11#15'ofPathMustExist'#15'ofFil'
+  +'eMustExist'#14'ofEnableSizing'#0#4'left'#3#148#2#0#0#11'TOpenDialog'#14'Ope'
+  +'nMIDIDialog'#10'DefaultExt'#6#4'.mlf'#6'Filter'#6'%MIDI files|*.mid;*.midi|'
+  +'All files|*.*'#7'Options'#11#15'ofPathMustExist'#15'ofFileMustExist'#14'ofE'
+  +'nableSizing'#0#4'left'#3'v'#2#0#0#11'TSaveDialog'#16'SaveLayoutDialog'#5'Ti'
+  +'tle'#6#9'Save file'#10'DefaultExt'#6#4'.mlf'#6'Filter'#6'%MIRP layout files'
+  +'|*.mlf|All files|*.*'#7'Options'#11#15'ofPathMustExist'#14'ofCreatePrompt'
+  +#14'ofEnableSizing'#12'ofViewDetail'#0#4'left'#3#208#2#0#0#6'TTimer'#13'Play'
+  +'countdown'#4'left'#3#7#3#0#0#0
+]);
