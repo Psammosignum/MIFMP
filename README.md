@@ -5,6 +5,7 @@
 # 注意，本软件为自动演奏脚本，使用即表示您已了解并承担可能的风险，使用后产生的任何后果开发者不负任何责任。
 ### 新功能
 为了适配FF14手游的钢琴演奏，更改了按键的数量
+
 增加了演奏前的三秒倒计时，避免手忙脚乱
 ### 如何使用
 #### 1. 前往[Releases](https://github.com/Psammosignum/MIFMP/releases)页面下载文件，文件名应为MIFMPx.x.x.zip
@@ -35,6 +36,7 @@ Works under GNU GPL3.0
 # Caution!!! This software is a autoplay script. Use at your own risk. Developer is not responsible for anything this software cause.
 ### New Functions
 To get work on FF14 Mobile bard music play system, modified the key number.
+
 Added 3 seconds count down before start play.
 ### How to use
 #### 1. Go to [Releases](https://github.com/Psammosignum/MIFMP/releases) download MIFMPx.x.x.zip
