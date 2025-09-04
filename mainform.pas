@@ -229,6 +229,8 @@ var
   TRLastNote: string = 'Last played note number: ';
   TRLastVelocity: string = 'Last played note velocity: ';
   TRNotRegistered: string = ' (NOT REGISTERED)';
+  LayoutMappingText: String = 'Layout edit (mapping) mode on, no input will be registered.'+#13+'Click a key to assign a character to it.';
+  idleText: String = 'Play any note on your piano keyboard.';
 
 implementation
 
@@ -662,6 +664,8 @@ begin
       TRLastNote := '最后演奏的音符: ';
       TRLastVelocity := '最后演奏时的速度: ';
       TRNotRegistered := ' (未指定)';
+      LayoutMappingText:='布局编辑（重排）模式已开启，音符按键将不会被指定.'+#13+'点击虚拟琴键来分配按键.';
+      idleText:= '请在MIDI设备上按下任意琴键.';
       InputFrame.Caption := '输入设备配置';
         InputPorts.Hint := '这里会显示所有可用的输入设备.';
         InputLabel.Caption := '设备:';
@@ -833,6 +837,7 @@ begin
     if (IsShifted(Layout[charIn])) then keybd_event(160, MapVirtualKey(160, 0), 0, 0);
     //if (IsCtrled(Layout[charIn])) then keybd_event(164, MapVirtualKey(164, 0), 0, 0);
     keybd_event(kv, MapVirtualKey(kv, 0), 0, 0);
+    sleep(20);
     keybd_event(kv, MapVirtualKey(kv, 0), 2, 0);
     if (IsShifted(Layout[charIn])) then keybd_event(160, MapVirtualKey(160, 0), 2, 0);
     //if (IsCtrled(Layout[charIn])) then keybd_event(164, MapVirtualKey(164, 0), 2, 0);
@@ -1072,10 +1077,10 @@ begin
         VK_ESCAPE: if (remapMode) and (waitForKey <> -1) then
         begin
           if pianoKeys[waitForKey].black then pianoKeys[waitForKey].Brush.Color := clBlack else pianoKeys[waitForKey].Brush.Color := clWhite;
-          FMain.TextLabel.Text := 'Layout edit (mapping) mode on, no input will be registered.'+#13+'Click a key to assign a character to it.';
-          waitForKey := -1;
+             FMain.TextLabel.Text := LayoutMappingText;
+             waitForKey := -1;
         end;
-      end;
+    end;
       if remapMode then
       begin
         if (waitForKey <> -1) and ((VirtualKey >= $30) and (VirtualKey <= $5A)) then
@@ -1294,7 +1299,7 @@ begin
   begin
     KeyboardCheck.Checked := true;
   end;
-  if remapMode then TextLabel.Text := 'Layout edit (mapping) mode on, no input will be registered.'+#13+'Click a key to assign a character to it.' else TextLabel.Text := 'Play any note on your piano keyboard.';
+  if remapMode then TextLabel.Text := LayoutMappingText else TextLabel.Text := idleText;
 end;
 procedure TFMain.EditShiftDownClick(Sender: TObject);
 var
